@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>낭만닥터 김사부의 돌담병원</title>
+<link rel="icon" href="./image/kimsabu_favicon.ico"/>
+
+<link rel="stylesheet" href="./css/z.css"/>
+<link rel="stylesheet" href="./css/default.css"/>
+<link rel="stylesheet" href="./main_css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b2c78db8f3.js" crossorigin="anonymous"></script>
+<script type="text/javascript"  src="js/mainpage.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+/* 리셋 CSS */
+* {margin:0;padding:0;box-sizing:border-box;}
+ul, li {list-style:none;}
+
+
+.slidebox {max-width:700px;margin:0 auto;position:relative;}
+.slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+.slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;background-color:#fff;width:100%;transition:all 1s;}
+.slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+.slidebox .slidelist .slideitem > a img {max-width:100%;}
+
+.slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+.slidebox .slide-control [class*="control"] label.prev {left:-50px;background:#333 url('./image/left-arrow.png') center center / 50% no-repeat;}
+.slidebox .slide-control [class*="control"] label.next {right:150px;background:#333 url('./image/right-arrow.png') center center / 50% no-repeat;}
+
+[name="slide"] {display:none;}
+#slide01:checked ~ .slidelist .slideitem {left:0;}
+#slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#slide03:checked ~ .slidelist .slideitem {left:-200%;}
+#slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+.slide-control [class*="control"] {display:none;}
+#slide01:checked ~ .slide-control .control01 {display:block;}
+#slide02:checked ~ .slide-control .control02 {display:block;}
+#slide03:checked ~ .slide-control .control03 {display:block;}
+#slide04:checked ~ .slide-control .control04 {display:block;}
+
+.container{
+padding: 0px;
+width: 100%;
+margin: 0 auto;
+}
+
+.company{
+margin: 0 auto;
+}
+
+</style>
+<body>
+
+<div class="container">
+	<nav class="navbar">
+		<div class="navbar_logo">
+			<a href="./mainpage.html"><img src="main_img/kimsabu_log.png"></a>
+		</div>
+		
+		<ul class="navbar_menu">
+			<li class="nav_li"><a href="Ceo_hi.html">병원소개</a>
+				<ul class="subnav">
+					<li><a href="Ceo_hi.html">병원장</a></li>
+					<li><a href="do.html">돌담병원</a></li>
+					<li><a href="scene.html">오시는길</a></li> 
+				</ul>
+			</li>
+			
+			<li class="nav_li"><a href="./cdv/menucdv.html">진료안내</a>
+				<ul class="subnav">
+					<li><a href="./cdv/Emergency.html">응급의학과</a></li>
+					<li><a href="./cdv/Thoracic.html">흉부외과</a></li>
+					<li><a href="./cdv/Neuro.html">신경외과</a></li> 
+				</ul>
+			</li>
+			
+			<li class="nav_li"><a href="./notice/List.html">공지사항</a>
+				<ul class="subnav">
+					<li><a href="./notice/List.html">병원소식</a></li>
+					<li><a href="./notice/list.jsp">고객의 소리</a></li>
+				</ul>
+			</li>
+			
+			<li class="nav_li"><a href="./login/loginForm.jsp">로그인</a>
+				<ul class="subnav">
+					<li><a href="./login/loginForm.jsp">로그인</a></li>
+					<li><a href="./login/join.jsp">회원가입</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<ul class="navbar_icons">
+			<li><a href="https://www.facebook.com/dramaviewagain/"><i class="fa-brands fa-facebook-square"></i></a></li>
+			<li><a href="https://youtu.be/xR3VFzylmTw"><i class="fa-brands fa-youtube"></i></a></li>
+		</ul>
+		
+		<a href="#" class="navbar_toogleBtn">
+			<i class="fa-solid fa-bars"></i>
+		</a>
+		
+	</nav>
+		
+		<div class="main_text">
+			<h4> 나는 내가 아는 모든 걸 총동원해서
+			<br/> 이 환자한테 필요한 의사가 되려고 노력중이다.</h4>
+		</div>
+</div>
+
+				
+
+		<div class="company">
+	<div class="lnb_h2">
+				<a href="./mainpage.html" class="goHome"><img src="./image/ic_home.png" alt="" /></a>
+				<img class="lt_img" src="./image/ic_lt.png" alt="" />
+				<a href="#">병원소개</a>
+				<img class="lt_img" src="./image/ic_lt.png" alt="" />
+				<a href="./do.html">돌담병원 둘러보기</a>			
+				</div>
+				
+	<div class="slidebox">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<ul class="slidelist">
+		<li class="slideitem">
+			<a><img src="./image/dol.jpg"></a>
+		</li>
+		<li class="slideitem">
+			<a><img src="./image/dol2.jpg"></a>
+		</li>
+		<li class="slideitem">
+			<a><img src="./image/dol3.jpg"></a>
+		</li>
+	</ul>
+	<div class="slide-control">
+		<div class="control01">
+			<label for="slide03" class="prev"></label>
+			<label for="slide02" class="next"></label>
+		</div>
+		<div class="control02">
+			<label for="slide01" class="prev"></label>
+			<label for="slide03" class="next"></label>
+		</div>
+		<div class="control03">
+			<label for="slide02" class="prev"></label>
+			<label for="slide01" class="next"></label>
+		</div>
+	</div>
+</div>
+
+
+		
+		</div>
+
+
+
+	</div>
+
+	</section>
+
+<!-- footer -->
+	<footer class="footer">
+		<div class="footer1">
+			
+			<a href="mainpage.html"><img src="main_img/kimsabu_log.png" width=180px></a>
+			
+		</div>
+		<div class="footer2">
+		<br/>
+		<h5>돌담병원 주소</h5>
+		서울 종로구 삼일대로 385-1 5층
+		<h5>돌담병원 원무과</h5>
+		1588-5858
+		<h5>돌담병원 진료예약</h5>
+		1523-1523
+		
+		</div>
+		<div class="footer3">
+			<a href="https://www.instagram.com/explore/tags/%EB%82%AD%EB%A7%8C%EB%8B%A5%ED%84%B0%EA%B9%80%EC%82%AC%EB%B6%80/">
+				<img src="./main_img/footer_insta.png" width=30px>
+			</a>
+			<a href="https://www.facebook.com/dramaviewagain/">
+				<img src="./main_img/footer_facebook.png" width=30px>
+			</a>
+			<a href="https://youtu.be/xR3VFzylmTw">
+				<img src="./main_img/footer_youtube.png" width=30px>
+			</a>
+		</div>
+	</footer>
+<!-- footer -->
+
+</body>
+</html>
